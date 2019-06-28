@@ -4,7 +4,7 @@ This repo contains course work and project for course Software Develoopment Skil
 
 ## How to run the project
 
-Make sure you have the latest versions of MongoDB, Node.js (including nodemon) and Angular installed.
+Make sure you have the latest versions of MongoDB and Node.js (including nodemon).
 
 Start mongodb.
 
@@ -12,7 +12,7 @@ Start mongodb.
 net start MongoDB
 ```
 
-Start the server running nodemon in the root directory.
+Start the server running nodemon in the root directory (/project).
 
 ```bash
 nodemon
