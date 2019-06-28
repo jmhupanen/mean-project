@@ -15,13 +15,13 @@ export class AuthService {
   registerUser(user){
     let headers = new HttpHeaders();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:3000/users/register', user, {headers: headers}).pipe(map((response: any) => response));
+    return this.http.post('users/register', user, {headers: headers}).pipe(map((response: any) => response));
   }
 
   authenticateUser(user){
     let headers = new HttpHeaders();
     headers.append('Content-Type','application/json');
-    return this.http.post('http://localhost:3000/users/authenticate', user, {headers: headers}).pipe(map((response: any) => response));
+    return this.http.post('users/authenticate', user, {headers: headers}).pipe(map((response: any) => response));
   }
 
   getProfile(){
@@ -34,7 +34,7 @@ export class AuthService {
       'Authorization':this.authToken,
       'Content-Type':'application/json'
     });
-    return this.http.get('http://localhost:3000/users/profile',{headers:headers});
+    return this.http.get('users/profile',{headers:headers});
   }
 
   storeUserData(token, user){
@@ -51,6 +51,8 @@ export class AuthService {
 
   loggedIn(){
     const helper = new JwtHelperService();
+    if(localStorage.getItem('id_token') == undefined)
+      return false;
     const isExpired = !helper.isTokenExpired(localStorage.getItem('id_token'));
     return isExpired;
   }
