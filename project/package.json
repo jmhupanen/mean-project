@@ -1,0 +1,23 @@
+{
+  "name": "meanproject",
+  "version": "1.0.0",
+  "description": "MEAN stack project with login authentication",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app"
+  },
+  "dependencies": {
+    "@auth0/angular-jwt": "^2.1.0",
+    "bcryptjs": "*",
+    "body-parser": "*",
+    "cors": "*",
+    "express": "*",
+    "jsonwebtoken": "*",
+    "mongoose": "*",
+    "passport": "*",
+    "passport-jwt": "*"
+  },
+  "author": "Juho Hupanen",
+  "license": "ISC"
+}

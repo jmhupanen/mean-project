@@ -1,0 +1,12 @@
+<div class="jumbotron text-center">
+  <h1>MEAN Stack Project</h1>
+  <p class="lead">Welcome to my MEAN Stack Project! This project has been built on top of Traversy Media's YouTube tutorial project 
+    <a href="https://www.youtube.com/playlist?list=PLillGF-RfqbZMNtaOXJQiDebNXjVapWPZ">MEAN Stack Front To Back</a> and is meant to 
+    be a demonstration project of my MEAN skills. I'm planning on possibly expanding this project in the future by adding new functionalities.
+    </p>
+    <p *ngIf="!authService.loggedIn()">By logging in you get access to all kinds of incredible features!!! Register a new account if you 
+      haven't one yet by choosing 'Register'.</p>
+  <div>
+    <a class="btn btn-primary" *ngIf="!authService.loggedIn()" [routerLink]="['/register']">Register</a> <a class="btn btn-dark" *ngIf="!authService.loggedIn()" [routerLink]="['/login']">Login</a>
+  </div>
+</div>
