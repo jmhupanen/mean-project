@@ -1,6 +1,6 @@
-# Software Development Skills | Juho Hupanen 0526260
+# MEAN Stack project
 
-This repo contains course work and project for course Software Develoopment Skills.
+This repo contains course work and project for course Software Development Skills.
 
 ## How to run the project
 
